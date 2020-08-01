@@ -11,9 +11,8 @@ void imprimeCelula(celula *cel) {
 }
 
 void imprimeLista(celula *cel) {
-    celula *celAux;
-    for (celAux = cel; celAux != NULL; celAux = celAux->proximaCelula)
-        imprimeCelula(celAux);
+    for (cel; cel != NULL; cel = cel->proximaCelula)
+        imprimeCelula(cel);
 }
 
 celula *criaCelula(int conteudo, celula *proxCel) {
@@ -50,10 +49,12 @@ celula *buscaCelulaPorConteudo(int conteudo, celula *cel) {
 }
 
 int main(int argc, char const *argv[]) {
-    imprimeLista(criaLista());
-    imprimeCelula(
-        buscaCelulaPorConteudo(1, criaLista())
-    );
+    celula *cel = criaLista();
+    imprimeLista(cel);
+    imprimeLista(cel);
+    // imprimeCelula(
+    //     buscaCelulaPorConteudo(1, criaLista())
+    // );
 
     return EXIT_SUCCESS;
 }
