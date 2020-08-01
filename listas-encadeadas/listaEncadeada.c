@@ -7,12 +7,19 @@ typedef struct celula {
 } celula;
 
 void imprimeCelula(celula *cel) {
+    if(cel == NULL) {
+        printf("Célula vazia");
+        return;
+    }
+
     printf("%d\n", cel->conteudo);
+    return;
 }
 
 void imprimeLista(celula *cel) {
     for (cel; cel != NULL; cel = cel->proximaCelula)
         imprimeCelula(cel);
+    return;
 }
 
 celula *criaCelula(int conteudo, celula *proxCel) {
@@ -23,18 +30,6 @@ celula *criaCelula(int conteudo, celula *proxCel) {
     cel->proximaCelula = proxCel;
 
     return cel;
-}
-
-celula *criaLista() {
-    celula *celula1;
-    celula *celula2;
-
-    celula1 = criaCelula(1, celula2);
-    celula2 = criaCelula(2, NULL);
-
-    celula1->proximaCelula = celula2;
-
-    return celula1;
 }
 
 celula *buscaCelulaPorConteudo(int conteudo, celula *cel) {
@@ -48,13 +43,44 @@ celula *buscaCelulaPorConteudo(int conteudo, celula *cel) {
     return celAux;
 }
 
+void insereCelula(int conteudo, celula *cel) {
+    if(cel == NULL)
+        return;
+    
+    celula *novaCel;
+
+    novaCel = malloc(sizeof(celula));
+    novaCel->conteudo = conteudo;
+    novaCel->proximaCelula = cel->proximaCelula;
+    cel->proximaCelula = novaCel;
+    return;
+}
+
+void removeCelula(celula *cel) {
+    celula *celAux = cel;
+    return;
+
+}
+
+void removeCelulaDaListaPorConteudo(int conteudo, celula *cel) {
+    return;
+}
+
+celula *criaLista() {
+    celula *celula1;
+    celula1 = criaCelula(1, NULL);
+
+    insereCelula(5, celula1);
+    insereCelula(4, celula1);
+    insereCelula(3, celula1);
+    insereCelula(2, celula1);
+
+    return celula1;
+}
+
 int main(int argc, char const *argv[]) {
     celula *cel = criaLista();
-    imprimeLista(cel);
-    imprimeLista(cel);
-    // imprimeCelula(
-    //     buscaCelulaPorConteudo(1, criaLista())
-    // );
+    // imprimeLista(cel);
 
     return EXIT_SUCCESS;
 }
