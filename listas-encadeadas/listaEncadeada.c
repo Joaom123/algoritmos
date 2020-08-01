@@ -1,13 +1,54 @@
 #include <stdio.h>
 #include <stdlib.h>
- 
-typedef struct no {
-    int conteudo; 
-    struct no *proximoNo;
-} no;
 
-int main(int argc, char const *argv[])
-{
-   printf ("tamanho do no = %ld\n", sizeof(no)); //16
-   return EXIT_SUCCESS;
+typedef struct celula {
+    int conteudo;
+    struct celula *proximaCelula;
+} celula;
+
+void imprimeLista(celula *cel) {
+    celula *celAux;
+    for (celAux = cel; celAux != NULL; celAux = celAux->proximaCelula) {
+        printf("%d\n", celAux->conteudo);
+    }
+}
+
+celula *criaCelula(int conteudo, celula *proxCel) {
+    celula *cel;
+
+    cel = malloc(sizeof(celula));
+    cel->conteudo = conteudo;
+    cel->proximaCelula = proxCel;
+
+    return cel;
+}
+
+celula *criaLista() {
+    celula *celula1;
+    celula *celula2;
+
+    celula1 = criaCelula(1, celula2);
+    celula2 = criaCelula(2, NULL);
+
+    celula1->proximaCelula = celula2;
+
+    return celula1;
+}
+
+celula *buscaCelulaPorConteudo(int conteudo, celula *cel) {
+    celula *celAux = cel;
+
+    while (celAux != NULL && celAux->conteudo != conteudo)
+    {
+        celAux = celAux->proximaCelula;
+    }
+
+    return celAux;
+}
+
+int main(int argc, char const *argv[]) {
+    imprimeLista(criaLista());
+    // printf();
+
+    return EXIT_SUCCESS;
 }
