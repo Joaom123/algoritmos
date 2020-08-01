@@ -6,11 +6,14 @@ typedef struct celula {
     struct celula *proximaCelula;
 } celula;
 
+void imprimeCelula(celula *cel) {
+    printf("%d\n", cel->conteudo);
+}
+
 void imprimeLista(celula *cel) {
     celula *celAux;
-    for (celAux = cel; celAux != NULL; celAux = celAux->proximaCelula) {
-        printf("%d\n", celAux->conteudo);
-    }
+    for (celAux = cel; celAux != NULL; celAux = celAux->proximaCelula)
+        imprimeCelula(celAux);
 }
 
 celula *criaCelula(int conteudo, celula *proxCel) {
@@ -48,7 +51,9 @@ celula *buscaCelulaPorConteudo(int conteudo, celula *cel) {
 
 int main(int argc, char const *argv[]) {
     imprimeLista(criaLista());
-    // printf();
+    imprimeCelula(
+        buscaCelulaPorConteudo(1, criaLista())
+    );
 
     return EXIT_SUCCESS;
 }
