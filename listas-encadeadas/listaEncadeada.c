@@ -43,6 +43,17 @@ celula *buscaCelulaPorConteudo(int conteudo, celula *cel) {
     return celAux;
 }
 
+celula *buscaCelulaAnteriorPorConteudo(int conteudo, celula *cel) {
+    celula *celAux = cel;
+
+    while (celAux != NULL && celAux->proximaCelula->conteudo != conteudo)
+    {
+        celAux = celAux->proximaCelula;
+    }
+
+    return celAux;
+}
+
 void insereCelula(int conteudo, celula *cel) {
     if(cel == NULL)
         return;
@@ -56,13 +67,20 @@ void insereCelula(int conteudo, celula *cel) {
     return;
 }
 
-void removeCelula(celula *cel) {
-    celula *celAux = cel;
+void removeProximaCelula(celula *cel) {
+    celula *celAux = cel->proximaCelula;
+    cel->proximaCelula = celAux->proximaCelula;
+    free(celAux);
     return;
-
 }
 
 void removeCelulaDaListaPorConteudo(int conteudo, celula *cel) {
+    celula *celEncontrada = buscaCelulaPorConteudo(conteudo, cel);
+
+    if (celEncontrada == NULL)
+        return;
+    
+
     return;
 }
 
@@ -79,8 +97,8 @@ celula *criaLista() {
 }
 
 int main(int argc, char const *argv[]) {
-    celula *cel = criaLista();
-    // imprimeLista(cel);
+    celula *cabecaDaLista = criaCelula(0, criaLista()); //Cabeça da lista, seu conteúdo não importa
+    imprimeLista(cabecaDaLista->proximaCelula);
 
     return EXIT_SUCCESS;
 }
