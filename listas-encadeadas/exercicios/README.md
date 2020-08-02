@@ -21,10 +21,10 @@ Faça isso sem calcular explicitamente o número n de células da lista e o quoc
 
 - [x] 4.7.8 Contagem e remoção. Escreva uma função que remova a k-ésima célula de uma lista encadeada.
 
-- [ ] 4.7.9 Contagem e inserção. Escreva uma função que insira uma nova célula com
+- [x] 4.7.9 Contagem e inserção. Escreva uma função que insira uma nova célula com
 conteúdo x entre a k-ésima e a (k+1)-ésima células de uma lista encadeada.
 
-- [ ] 4.7.10 Liberação. Escreva uma função que aplique a função free a todas as célu-
+- [x] 4.7.10 Liberação. Escreva uma função que aplique a função free a todas as célu-
 las de uma lista encadeada. Estamos supondo, é claro, que cada célula da lista foi
 originalmente alocado por malloc.
 
