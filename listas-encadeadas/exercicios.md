@@ -2,10 +2,6 @@
 
 ## 4.7 - Manipulação de listas
 
-A maioria dos exercícios desta seção tem duas versões: uma para lista com cabeça e
-outra para lista sem cabeça. Além disso, é interessante resolver cada exercício de duas
-maneiras: uma iterativa e uma recursiva.
-
 4.7.1 Vetor para lista. Escreva uma função que copie um vetor para uma lista encadeada.
 
 4.7.2 Lista para vetor. Escreva uma função que copie uma lista encadeada para um vetor.
