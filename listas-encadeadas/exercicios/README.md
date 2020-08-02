@@ -19,7 +19,7 @@ encadeada.
 o endereço de uma célula que esteja o mais próximo possível do ponto médio da lista.
 Faça isso sem calcular explicitamente o número n de células da lista e o quociente.
 
-- [ ] 4.7.8 Contagem e remoção. Escreva uma função que remova a k-ésima célula de uma lista encadeada.
+- [x] 4.7.8 Contagem e remoção. Escreva uma função que remova a k-ésima célula de uma lista encadeada.
 
 - [ ] 4.7.9 Contagem e inserção. Escreva uma função que insira uma nova célula com
 conteúdo x entre a k-ésima e a (k+1)-ésima células de uma lista encadeada.
@@ -49,8 +49,7 @@ endereço é p. Que dados sua função recebe? Que coisa devolve?
 nova célula com conteúdo y logo após a célula cujo endereço é p. Que dados sua função
 recebe? Que coisa devolve?
 
-- [ ] 4.8.4 Problema de Josephus. Imagine n pessoas 
-dispostas em círculo. Suponha que
+- [ ] 4.8.4 Problema de Josephus. Imagine n pessoas dispostas em círculo. Suponha que
 as pessoas estão numeradas de 1 a n no sentido horário. Começando com a pessoa de
 número 1, percorra o círculo no sentido horário e elimine cada m-ésima pessoa enquanto
 o círculo tiver duas ou mais pessoas. Qual
