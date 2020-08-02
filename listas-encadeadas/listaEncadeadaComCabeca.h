@@ -90,6 +90,8 @@ celula *criaLista() {
     celula *celula1;
     celula1 = criaCelula(1, NULL);
 
+    insereCelula(7, celula1);
+    insereCelula(6, celula1);
     insereCelula(5, celula1);
     insereCelula(4, celula1);
     insereCelula(3, celula1);
