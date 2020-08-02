@@ -10,9 +10,9 @@
 
 - [ ] 4.7.4 Comparação. Escreva uma função que decida se duas listas dadas têm o mesmo conteúdo.
 
-- [ ] 4.7.5 Concatenação. Escreva uma função que concatene duas listas encadeadas.
+- [x] 4.7.5 Concatenação. Escreva uma função que concatene duas listas encadeadas.
 
-- [ ] 4.7.6 Contagem. Escreva uma função que conte o número de células de uma lista
+- [x] 4.7.6 Contagem. Escreva uma função que conte o número de células de uma lista
 encadeada.
 
 - [ ] 4.7.7 Ponto médio. Escreva uma função que receba uma lista encadeada e devolva
