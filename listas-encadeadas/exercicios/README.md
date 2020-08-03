@@ -45,7 +45,7 @@ o número de ocorrências de cada palavra.
 - [x] 4.8.2 Escreva uma função que remova de uma lista duplamente encadeada a célula cujo
 endereço é p. Que dados sua função recebe? Que coisa devolve?
 
-- [ ] 4.8.3 Suponha uma lista duplamente encadeada. Escreva uma função que insira uma
+- [x] 4.8.3 Suponha uma lista duplamente encadeada. Escreva uma função que insira uma
 nova célula com conteúdo y logo após a célula cujo endereço é p. Que dados sua função
 recebe? Que coisa devolve?
 
