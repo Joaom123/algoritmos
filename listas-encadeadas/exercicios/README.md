@@ -28,7 +28,7 @@ conteúdo x entre a k-ésima e a (k+1)-ésima células de uma lista encadeada.
 las de uma lista encadeada. Estamos supondo, é claro, que cada célula da lista foi
 originalmente alocado por malloc.
 
-- [ ] 4.7.11 Inversão. Escreva uma função que inverta a ordem das células de uma lista
+- [x] 4.7.11 Inversão. Escreva uma função que inverta a ordem das células de uma lista
 encadeada (a primeira passa a ser a última, a segunda passa a ser a penúltima etc.).
 Faça isso sem criar novas células; apenas altere os ponteiros.
 

@@ -4,27 +4,41 @@
 
 void inversao(celula *lista) {
     celula *cabecaDaLista = lista;
-    lista = lista->proximaCelula;
+    celula *primeiraCelula = cabecaDaLista->proximaCelula;
+    
+    celula *anteriorCel = primeiraCelula;
+    celula *cel = primeiraCelula->proximaCelula;
+    celula *proxCel = cel->proximaCelula;
 
-    while (lista->proximaCelula != NULL)
+    primeiraCelula->proximaCelula = NULL; //Primeira célula no final
+
+    while (cel != NULL)
     {
-        celula *proximaCelula = lista->proximaCelula;
-        lista->proximaCelula = cabecaDaLista;
-        lista = proximaCelula;
-        cabecaDaLista = cabecaDaLista->proximaCelula;
+        cel->proximaCelula = anteriorCel;
+        
+        //Sai na última célula
+        if (proxCel == NULL)
+            break;
+
+        //Troca para próxima iteração
+        anteriorCel = cel;
+        cel = proxCel;
+        proxCel = cel->proximaCelula;
     }
+
+    cabecaDaLista->proximaCelula = cel; //aponta pro nova primeira célula
 
     return;
 }
 
-// 0 - 1 - 2 - 3
-// 0 - 3 - 2 - 1 
 int main(int argc, char const *argv[])
 {
     celula *cabecaDaLista1 = criaCelula(0, criaLista());
     
+    imprimeLista(cabecaDaLista1->proximaCelula); //original
+    imprimeSeparador();
     inversao(cabecaDaLista1);
-    imprimeLista(cabecaDaLista1->proximaCelula);
+    imprimeLista(cabecaDaLista1->proximaCelula); //invertida
     
     return EXIT_SUCCESS;
 }
