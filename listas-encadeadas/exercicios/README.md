@@ -40,9 +40,9 @@ o número de ocorrências de cada palavra.
 
 ## 4.8 - Outros tipos de listas encadeadas
 
-- [ ] 4.8.1 Descreva, em C, a estrutura de uma célula de uma lista duplamente encadeada.
+- [x] 4.8.1 Descreva, em C, a estrutura de uma célula de uma lista duplamente encadeada.
 
-- [ ] 4.8.2 Escreva uma função que remova de uma lista duplamente encadeada a célula cujo
+- [x] 4.8.2 Escreva uma função que remova de uma lista duplamente encadeada a célula cujo
 endereço é p. Que dados sua função recebe? Que coisa devolve?
 
 - [ ] 4.8.3 Suponha uma lista duplamente encadeada. Escreva uma função que insira uma
