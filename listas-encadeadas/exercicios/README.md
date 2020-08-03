@@ -15,7 +15,7 @@
 - [x] 4.7.6 Contagem. Escreva uma função que conte o número de células de uma lista
 encadeada.
 
-- [ ] 4.7.7 Ponto médio. Escreva uma função que receba uma lista encadeada e devolva
+- [x] 4.7.7 Ponto médio. Escreva uma função que receba uma lista encadeada e devolva
 o endereço de uma célula que esteja o mais próximo possível do ponto médio da lista.
 Faça isso sem calcular explicitamente o número n de células da lista e o quociente.
 
