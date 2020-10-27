@@ -1,3 +1,3 @@
-file(GLOB_RECURSE Filas_SOURCES "*.c")
+# file(GLOB_RECURSE Filas_SOURCES "*.c")
 
-add_executable(filas_executavel ${Filas_SOURCES})
+add_executable(filas_executavel main.c)
