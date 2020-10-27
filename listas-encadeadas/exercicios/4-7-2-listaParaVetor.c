@@ -8,7 +8,6 @@ int copiaListaParaArray(celula *lista) {
     {
         lista = lista->proximaCelula;
     }
-    
 }
 
 
@@ -16,6 +15,6 @@ int main(int argc, char const *argv[])
 {
     int inteiros [5];
     celula *cabecaDaLista = criaCelula(0, criaLista());
-    inteiros = copiaListaParaArray(cabecaDaLista);
+    //inteiros = copiaListaParaArray(cabecaDaLista);
     return 0;
 }

@@ -17,7 +17,6 @@ celula *copiaArrayParaLista(int inteiros[]) {
     return celAux->proximaCelula;
 }
 
-
 int main(int argc, char const *argv[])
 {
     int inteiros [5] = {0, 1, 2, 3, 4};
