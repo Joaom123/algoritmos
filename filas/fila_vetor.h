@@ -1,4 +1,6 @@
 #include <stdio.h>
+#ifndef FILA_VETOR_H
+#define FILA_VETOR_H
 
 #define N 100
 
@@ -24,3 +26,5 @@ int filaEstaVazia (void) {
 int filaEstaCheia (void) {
    return indexFim == N;
 }
+
+#endif
