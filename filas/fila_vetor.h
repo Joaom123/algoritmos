@@ -8,15 +8,15 @@
 int fila[N];
 int indexInicio, indexFim;
 
-void cria() {
+void criar() {
     indexInicio = indexFim = 0;
 }
 
-void insere(int valor) {
+void inserir(int valor) {
     fila[indexFim++] = valor;
 }
 
-void reseta() {
+void resetar() {
     indexInicio = 0;
     indexFim = 0;
     for (int i = 0; i < N; ++i) {
@@ -24,7 +24,7 @@ void reseta() {
     }
 }
 
-int retira() {
+int remover() {
     return fila[indexInicio++];
 }
 
