@@ -32,7 +32,7 @@ void test_reseta() {
     assert(indexFim == 0);
 }
 
-void test_suite_fila() {
+void test_suite_fila_vetor() {
     test_cria_fila();
     test_insere();
     test_remove();
