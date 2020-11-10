@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../listaEncadeadaComCabeca.h"
+#include "../lista_encadeada_com_cabeca.h"
 
 void contagemERemocao(int numeroDaCelula, celula *lista1) {
     int numeroDeCelulas = 0;

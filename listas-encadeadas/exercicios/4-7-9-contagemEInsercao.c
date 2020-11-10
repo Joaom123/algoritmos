@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../listaEncadeadaComCabeca.h"
+#include "../lista_encadeada_com_cabeca.h"
 
 void contagemEInsercao(int numeroDaCelula, int conteudo, celula *lista1) {
     int numeroDeCelulas = 0;

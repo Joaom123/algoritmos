@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../listaEncadeadaComCabeca.h"
+#include "../lista_encadeada_com_cabeca.h"
 
 int copiaListaParaArray(celula *lista) {
     int aux [5];

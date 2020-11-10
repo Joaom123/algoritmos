@@ -17,7 +17,7 @@ void imprimeCelula(celula *cel) {
 }
 
 void imprimeLista(celula *cel) {
-    for (cel; cel != NULL; cel = cel->proximaCelula)
+    for ( ; cel != NULL; cel = cel->proximaCelula)
         imprimeCelula(cel);
     return;
 }

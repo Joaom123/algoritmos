@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../listaEncadeadaComCabeca.h"
+#include "../lista_encadeada_com_cabeca.h"
 
 celula *concatena(celula *lista1, celula *lista2) {
     celula *primeiraCelulaDaLista1 = lista1->proximaCelula;
