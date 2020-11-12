@@ -38,6 +38,15 @@ void empilha(Pilha* pilha, int valor) {
     pilha->topo += 1;
 }
 
+int desempilha(Pilha* pilha) {
+    if (vazia(pilha))
+        return 0;
+
+    int indexDoElementoDesempilhado = pilha->topo;
+    pilha->topo -= 1;
+    return indexDoElementoDesempilhado;
+}
+
 void libera_pilha(Pilha* pilha) {
     free(pilha);
 }
