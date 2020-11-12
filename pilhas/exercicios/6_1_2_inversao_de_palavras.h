@@ -3,14 +3,15 @@
 //
 #include <stdio.h>
 #include <z3.h>
+#include "../pilha_vetor.h"
 
 #ifndef ALGORITMOS_6_1_2_INVERSAO_DE_PALAVRAS_H
 #define ALGORITMOS_6_1_2_INVERSAO_DE_PALAVRAS_H
 
 char pegaLetra(const char *frase, int indexDaFrase);
 int letraEUmEspaco(char letra);
-bool naoEFimDaFrase(const char *frase, int indexDaFrase);
-
+bool fimDaFrase(const char *frase, int indexDaFrase);
+void desempilhaEImprime2(Pilha *palavra);
 
 //6.1.2 Inversão de palavras.
 // Escreva uma função que inverta a ordem das letras de cada palavra de uma sentença,
@@ -18,33 +19,29 @@ bool naoEFimDaFrase(const char *frase, int indexDaFrase);
 // A aplicação da operação à sentença
 // AMU MEGASNEM ATERCES, por exemplo, deve produzir UMA MENSAGEM SECRETA.
 
-
 int inversaoDePalavras(char *frase) {
-    //Todo Separar as palavras por espaço
+    //
     int indexDaFrase = 0;
 
     // Uma frase é composta por várias palavras
-    char *palavra;
-    int indexDaPalavra = 0;
+    Pilha *palavra = cria_pilha();
 
 
-    while (naoEFimDaFrase(frase, indexDaFrase)) {
+    while (!fimDaFrase(frase, indexDaFrase)) {
         char letra = pegaLetra(frase, indexDaFrase);
         ++indexDaFrase;
-        palavra[indexDaPalavra] = letra;
 
-        //Guardar palavra
         if(letraEUmEspaco(letra)) {
-
-            indexDaPalavra = 0;
+            desempilhaEImprime2(palavra);
+        }else{
+            empilha(palavra, letra);
         }
     }
-    //Todo Adicionar tais palavras a uma pilha
-    //Todo Desempilha e Imprime tudo
+
 }
 
-bool naoEFimDaFrase(const char *frase, int indexDaFrase) {
-    return pegaLetra(frase, indexDaFrase) != '\0';
+bool fimDaFrase(const char *frase, int indexDaFrase) {
+    return pegaLetra(frase, indexDaFrase) == '\0';
 }
 
 char pegaLetra(const char *frase, int indexDaFrase) {
@@ -53,6 +50,13 @@ char pegaLetra(const char *frase, int indexDaFrase) {
 
 int letraEUmEspaco(char letra) {
     return letra == 32;
+}
+
+void desempilhaEImprime2(Pilha *palavra) {
+    while(!vazia(palavra)) {
+        printf("%c", desempilha(palavra));
+    }
+    printf("%s", " ");
 }
 
 #endif //ALGORITMOS_6_1_2_INVERSAO_DE_PALAVRAS_H

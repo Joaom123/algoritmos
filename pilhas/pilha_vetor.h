@@ -30,21 +30,30 @@ Pilha* cria_pilha(void) {
 }
 
 void empilha(Pilha* pilha, int valor) {
-    if (pilha_lotada(pilha))
+    if (pilha_lotada(pilha)){
         return;
+    }
 
     int topo_da_pilha = pilha->topo;
     pilha->elementos[topo_da_pilha] = valor;
-    pilha->topo += 1;
+    pilha->topo++;
 }
 
 int desempilha(Pilha* pilha) {
-    if (vazia(pilha))
-        return 0;
+    if (vazia(pilha)){
+        return -1;
+    }
 
-    int indexDoElementoDesempilhado = pilha->topo;
-    pilha->topo -= 1;
-    return indexDoElementoDesempilhado;
+    int elementoDesempilhado = pilha->elementos[pilha->topo - 1];
+    pilha->topo--;
+    return elementoDesempilhado;
+}
+
+void desempilhaEImprime(Pilha *pilha) {
+    while(!vazia(pilha)) {
+        int elementoDesempilhado = desempilha(pilha);
+        printf("%d", elementoDesempilhado);
+    }
 }
 
 void libera_pilha(Pilha* pilha) {

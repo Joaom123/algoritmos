@@ -12,7 +12,8 @@ void pilhas() {
     pilha_vetor_test_suite();
 
     //exercícios
-    inversaoDePalavras("ISTO TALVEZ SEJA UM TESTE");
+    inversaoDePalavras("AMU MEGASNEM ATERCES ");
+
 }
 
 #endif //ALGORITMOS_PILHAS_H

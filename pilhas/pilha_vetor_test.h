@@ -35,10 +35,10 @@ void empilha_vetor() {
 
 void desempilha_vetor() {
     Pilha *pilha = cria_pilha_para_testes();
-    desempilha(pilha);
+    int elementoDesempilhado1 = desempilha(pilha);
 
     assert(pilha->topo == 4);
-    assert(pilha->elementos[pilha->topo - 1] == 4);
+    assert(elementoDesempilhado1 == 5);
 }
 
 void desempilha_de_pilha_vetor_vazia_test() {
