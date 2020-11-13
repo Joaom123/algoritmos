@@ -19,7 +19,7 @@ void desempilhaEImprime2(Pilha *palavra);
 // A aplicação da operação à sentença
 // AMU MEGASNEM ATERCES, por exemplo, deve produzir UMA MENSAGEM SECRETA.
 
-int inversaoDePalavras(char *frase) {
+void inversaoDePalavras(char *frase) {
     //
     int indexDaFrase = 0;
 
@@ -27,10 +27,14 @@ int inversaoDePalavras(char *frase) {
     Pilha *palavra = cria_pilha();
 
 
-    while (!fimDaFrase(frase, indexDaFrase)) {
+    while (true) {
+        if (fimDaFrase(frase, indexDaFrase)) {
+            desempilhaEImprime2(palavra);
+            return;
+        }
+
         char letra = pegaLetra(frase, indexDaFrase);
         ++indexDaFrase;
-
         if(letraEUmEspaco(letra)) {
             desempilhaEImprime2(palavra);
         }else{
