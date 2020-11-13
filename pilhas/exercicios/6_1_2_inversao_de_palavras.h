@@ -14,7 +14,7 @@ int letraEUmEspaco(char letra);
 
 bool fimDaFrase(const char *frase, int indexDaFrase);
 
-void desempilhaEImprime2(Pilha *palavra);
+void desempilhaEImprimePalavra(Pilha *palavra);
 
 //6.1.2 Inversão de palavras.
 // Escreva uma função que inverta a ordem das letras de cada palavra de uma sentença,
@@ -23,7 +23,6 @@ void desempilhaEImprime2(Pilha *palavra);
 // AMU MEGASNEM ATERCES, por exemplo, deve produzir UMA MENSAGEM SECRETA.
 
 void inversaoDePalavras(char *frase) {
-    //
     int indexDaFrase = 0;
 
     // Uma frase é composta por várias palavras
@@ -31,14 +30,17 @@ void inversaoDePalavras(char *frase) {
 
     while (true) {
         if (fimDaFrase(frase, indexDaFrase)) {
-            desempilhaEImprime2(palavra);
+            desempilhaEImprimePalavra(palavra);
             return;
         }
 
         char letra = pegaLetra(frase, indexDaFrase);
         ++indexDaFrase;
+
+        // caso a letra seja espaço, desempilhar e imprimir
+        // do contrário, empilhar
         if (letraEUmEspaco(letra)) {
-            desempilhaEImprime2(palavra);
+            desempilhaEImprimePalavra(palavra);
         } else {
             empilha(palavra, letra);
         }
@@ -46,6 +48,7 @@ void inversaoDePalavras(char *frase) {
 
 }
 
+//retorna true caso seja fim da frase
 bool fimDaFrase(const char *frase, int indexDaFrase) {
     return pegaLetra(frase, indexDaFrase) == '\0';
 }
@@ -54,11 +57,12 @@ char pegaLetra(const char *frase, int indexDaFrase) {
     return frase[indexDaFrase];
 }
 
+// retorna true caso letra seja um espaço
 int letraEUmEspaco(char letra) {
     return letra == 32;
 }
 
-void desempilhaEImprime2(Pilha *palavra) {
+void desempilhaEImprimePalavra(Pilha *palavra) {
     while (!vazia(palavra)) {
         printf("%c", desempilha(palavra));
     }
