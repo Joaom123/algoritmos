@@ -9,8 +9,11 @@
 #define ALGORITMOS_6_1_2_INVERSAO_DE_PALAVRAS_H
 
 char pegaLetra(const char *frase, int indexDaFrase);
+
 int letraEUmEspaco(char letra);
+
 bool fimDaFrase(const char *frase, int indexDaFrase);
+
 void desempilhaEImprime2(Pilha *palavra);
 
 //6.1.2 Inversão de palavras.
@@ -26,7 +29,6 @@ void inversaoDePalavras(char *frase) {
     // Uma frase é composta por várias palavras
     Pilha *palavra = cria_pilha();
 
-
     while (true) {
         if (fimDaFrase(frase, indexDaFrase)) {
             desempilhaEImprime2(palavra);
@@ -35,9 +37,9 @@ void inversaoDePalavras(char *frase) {
 
         char letra = pegaLetra(frase, indexDaFrase);
         ++indexDaFrase;
-        if(letraEUmEspaco(letra)) {
+        if (letraEUmEspaco(letra)) {
             desempilhaEImprime2(palavra);
-        }else{
+        } else {
             empilha(palavra, letra);
         }
     }
@@ -57,7 +59,7 @@ int letraEUmEspaco(char letra) {
 }
 
 void desempilhaEImprime2(Pilha *palavra) {
-    while(!vazia(palavra)) {
+    while (!vazia(palavra)) {
         printf("%c", desempilha(palavra));
     }
     printf("%s", " ");

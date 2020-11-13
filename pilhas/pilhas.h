@@ -13,7 +13,7 @@ void pilhas() {
     pilha_vetor_test_suite();
 
     //exercícios
-    inversaoDePalavras("AMU MEGASNEM ATERCES");
+//    inversaoDePalavras("AMU MEGASNEM ATERCES");
     permutacoes();
 
 }
