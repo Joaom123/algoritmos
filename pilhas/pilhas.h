@@ -7,6 +7,7 @@
 #include "pilha_vetor_test.h"
 #include "exercicios/6_1_2_inversao_de_palavras.h"
 #include "exercicios/6_1_3_permutacoes.h"
+#include "exercicios/aplicacao_parenteses_e_chaves.h"
 
 void pilhas() {
     //testes
@@ -14,7 +15,8 @@ void pilhas() {
 
     //exercícios
 //    inversaoDePalavras("AMU MEGASNEM ATERCES");
-    permutacoes();
+//    permutacoes();
+    verificaSeSequenciaDeParentesesEChavesEEBemFormada("({})");
 
 }
 
