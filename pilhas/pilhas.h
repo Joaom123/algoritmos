@@ -16,7 +16,10 @@ void pilhas() {
     //exercícios
 //    inversaoDePalavras("AMU MEGASNEM ATERCES");
 //    permutacoes();
-    verificaSeSequenciaDeParentesesEChavesEEBemFormada("({})");
+//    verificaSeSequenciaDeParentesesEChavesEEBemFormada("({})");
+//    verificaSeSequenciaDeParentesesEChavesEEBemFormada("({}");
+//    verificaSeSequenciaDeParentesesEChavesEEBemFormada("({)");
+//    verificaSeSequenciaDeParentesesEChavesEEBemFormada("{})");
 
 }
 
