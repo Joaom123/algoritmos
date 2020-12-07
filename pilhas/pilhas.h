@@ -20,7 +20,6 @@ void pilhas() {
 //    verificaSeSequenciaDeParentesesEChavesEEBemFormada("({}");
 //    verificaSeSequenciaDeParentesesEChavesEEBemFormada("({)");
 //    verificaSeSequenciaDeParentesesEChavesEEBemFormada("{})");
-
 }
 
 #endif //ALGORITMOS_PILHAS_H
