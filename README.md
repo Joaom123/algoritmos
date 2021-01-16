@@ -6,4 +6,4 @@ Livro base: Paulo Feofillof
 * Capítulo 5 - Filas
 * Capítulo 6 - Pilhas
 * Capítulo 9 - Mergesort
-* Capítulo 10 - 
+
