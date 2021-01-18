@@ -1,28 +1,36 @@
 #include "assert.h"
-#include "fila_vetor.h"
+#include "filaVetor.h"
 
-void test_cria_fila() {
+int TEST_CRIA_FILA() {
     criar();
+//    assert(indexInicio == 0 && indexFim == 0);
 
-    assert(indexInicio == 0 && indexFim == 0);
+    return 1;
 }
 
-void test_insere() {
+int TEST_INSERE() {
     inserir(1);
     inserir(2);
 
-    assert(fila[0] == 1);
+    assert(fila[0] == 2);
     assert(fila[1] == 2);
+
+    return 0;
 }
 
-void test_remove() {
+int main(void) {
+    TEST_CRIA_FILA();
+    TEST_INSERE();
+}
+
+void TEST_REMOVE() {
     int retirado = remover();
 
     assert(retirado == 1);
     assert(primeiro_da_fila() == 2);
 }
 
-void test_reseta() {
+void TEST_RESETA() {
     resetar();
 
     for (int i = 0; i < N; ++i) {
@@ -30,11 +38,4 @@ void test_reseta() {
     }
     assert(indexInicio == 0);
     assert(indexFim == 0);
-}
-
-void test_suite_fila_vetor() {
-    test_cria_fila();
-    test_insere();
-    test_remove();
-    test_reseta();
 }

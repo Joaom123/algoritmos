@@ -2,7 +2,7 @@
 // Created by joaomarcus on 12/11/2020.
 //
 #include <stdio.h>
-#include <z3.h>
+//#include <z3.h>
 #include "../pilha_vetor.h"
 
 #ifndef ALGORITMOS_6_1_2_INVERSAO_DE_PALAVRAS_H
@@ -12,7 +12,7 @@ char pegaLetra(const char *frase, int indexDaFrase);
 
 int letraEUmEspaco(char letra);
 
-bool fimDaFrase(const char *frase, int indexDaFrase);
+int fimDaFrase(const char *frase, int indexDaFrase);
 
 void desempilhaEImprimePalavra(Pilha *palavra);
 
@@ -28,7 +28,7 @@ void inversaoDePalavras(char *frase) {
     // Uma frase é composta por várias palavras
     Pilha *palavra = cria_pilha();
 
-    while (true) {
+    while (1) {
         if (fimDaFrase(frase, indexDaFrase)) {
             desempilhaEImprimePalavra(palavra);
             return;
@@ -49,7 +49,7 @@ void inversaoDePalavras(char *frase) {
 }
 
 //retorna true caso seja fim da frase
-bool fimDaFrase(const char *frase, int indexDaFrase) {
+int fimDaFrase(const char *frase, int indexDaFrase) {
     return pegaLetra(frase, indexDaFrase) == '\0';
 }
 
