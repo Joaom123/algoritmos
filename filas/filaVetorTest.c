@@ -12,7 +12,7 @@ int TEST_INSERE() {
     inserir(1);
     inserir(2);
 
-    assert(fila[0] == 2);
+    assert(fila[0] == 1);
     assert(fila[1] == 2);
 
     return 0;

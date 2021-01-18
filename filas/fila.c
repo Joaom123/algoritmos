@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "filaVetor.h"
 
 int main(void) {
