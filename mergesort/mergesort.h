@@ -43,13 +43,14 @@ static void merge(int vetor[], int indexInicio, int indexMeio, int indexFim) {
 void mergesort(int vetor[], int indexInicio, int indexFim) {
     //caso de saida da recorrência,
     //ocorre quando há apenas um elemento no array
-    if (indexInicio >= indexFim)
+    if (indexInicio >= indexFim - 1)
         return;
 
     int indexMeio;
     indexMeio = (indexInicio + indexFim)/2;
+
     mergesort(vetor, indexInicio, indexMeio);
-    mergesort(vetor, indexMeio + 1, indexFim);
+    mergesort(vetor, indexMeio, indexFim);
     merge(vetor, indexInicio, indexMeio, indexFim);
 }
     

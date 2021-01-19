@@ -4,20 +4,21 @@
 #include <stdio.h>
 #include "mergesort.h"
 
-void imprimeVetor(int *vetor) {
-    int i;
-    for (i = 0; i < 6; i++)
+int tamanhoDoVetor = 10;
+
+void imprimeVetor(int vetor[]) {
+    for (int i = 0; i < tamanhoDoVetor; i++)
         printf("%d ", vetor[i]);
     printf("\n");
 }
 
 int main() {
-    int vetor[] = {4, 2, 1, 2, 4, 6};
+    int vetor[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
     printf("Vetor não-ordenado: ");
     imprimeVetor(vetor);
 
-    mergesort(vetor, 0, 5);
+    mergesort(vetor, 0, tamanhoDoVetor );
 
     printf("Vetor ordenado: ");
     imprimeVetor(vetor);
