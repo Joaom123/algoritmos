@@ -14,12 +14,12 @@ void imprimeVetor(int vetor[]) {
 }
 
 int main() {
-    int vetor[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 2, 3, 4, 5};
+    int vetor[] = {10, 9, 8, 7, 6, 15, 4, 3, 2, 1, 1, 2, 3, 4, 5};
 
     printf("Vetor não-ordenado: ");
     imprimeVetor(vetor);
 
-    heapsort(vetor);
+    heapsort(vetor, tamanhoDoVetor);
 
     printf("Vetor ordenado: ");
     imprimeVetor(vetor);
