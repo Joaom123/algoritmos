@@ -47,8 +47,7 @@ void mergesort(int vetor[], int indexInicio, int indexFim) {
     if (indexInicio >= indexFim)
         return;
 
-    int indexMeio;
-    indexMeio = floor((indexInicio + indexFim)/2);
+    int indexMeio = floor((indexInicio + indexFim)/2);
 //    printf("%d\n", indexMeio);
 
     mergesort(vetor, indexInicio, indexMeio);

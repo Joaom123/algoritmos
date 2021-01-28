@@ -5,24 +5,25 @@
 #include <stdio.h>
 #include "mergesort.h"
 
-int tamanhoDoVetor = 15;
-
-void imprimeVetor(int vetor[]) {
-    for (int i = 0; i < tamanhoDoVetor; i++)
+void imprimeVetor(int vetor[], int tamanho) {
+    for (int i = 0; i < tamanho; i++)
         printf("%d ", vetor[i]);
     printf("\n");
 }
 
 int main() {
-    int vetor[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 2, 3, 4, 5};
+    int vetor[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 9, 55, 11, 222, 00, 5644, 96};
+
+    int tamanhoDoVetor = sizeof(vetor) / sizeof(int);
+    printf("Tamanho: %d\n", tamanhoDoVetor);
 
     printf("Vetor não-ordenado: ");
-    imprimeVetor(vetor);
+    imprimeVetor(vetor, tamanhoDoVetor);
 
     mergesort(vetor, 0, tamanhoDoVetor - 1);
 
     printf("Vetor ordenado: ");
-    imprimeVetor(vetor);
+    imprimeVetor(vetor, tamanhoDoVetor);
 
     return 0;
 }
